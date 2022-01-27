@@ -31,6 +31,9 @@ namespace TpTvSeries.Services.Services
             return await _unitOfWork.Series.GetAllSerieAsync();
         }
 
-
+        public async Task<Serie> GetSerieById(int id)
+        {
+            return await _unitOfWork.Series.GetAllWithSeasonByIdAsync(id);
+        }
     }
 }

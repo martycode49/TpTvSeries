@@ -10,7 +10,8 @@ namespace TpTvSeries.CORE.Repositories.Interfaces
     public interface ICustomSerieRepository : IGenericRepository<Serie>
     {
         #region READ
-        IEnumerable<Serie> ComplexQuery();
+        Task<IEnumerable<Serie>> GetAllWithSeasonAsync();
+        Task<Serie> GetAllWithSeasonByIdAsync(int id);
         #endregion
     }
 }

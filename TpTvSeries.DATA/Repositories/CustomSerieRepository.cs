@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using TpTvSeries.CORE.Models;
 using TpTvSeries.CORE.Repositories;
@@ -17,11 +19,17 @@ namespace TpTvSeries.DATA.Repositories
         {
 
         }
+
+
         #region READ
-        public IEnumerable<Serie> ComplexQuery()
+        async Task<IEnumerable<Serie>> ICustomSerieRepository.GetAllWithSeasonAsync()
         {
-            // Simulate a complex query
-            return new List<Serie>();
+            return await _dbSet.Include(c => c.Seasons).ToListAsync();
+        }
+
+        async Task<Serie> ICustomSerieRepository.GetAllWithSeasonByIdAsync(int id)
+        {
+            return await _dbSet.Include(s => s.Seasons).SingleOrDefaultAsync(s => s.Id == id);
         }
         #endregion
     }

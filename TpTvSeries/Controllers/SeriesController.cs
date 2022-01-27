@@ -27,6 +27,23 @@ namespace TpTvSeries.Controllers
             return View(list);
         }
 
+        //Get: Series/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+                {
+                return StatusCode(400); // Http bad request
+                }
+            var series = await _serieService.GetSerieById((int)id);
+
+            if(series == null)
+            {
+                return StatusCode(404); // Http not found
+            }
+
+            return View(series);
+        }
+
         // View Serie/Create
         public ActionResult Create()
         {
