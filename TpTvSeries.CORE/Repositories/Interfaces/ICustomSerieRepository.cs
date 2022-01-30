@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TpTvSeries.CORE.Dto;
 using TpTvSeries.CORE.Models;
 
 namespace TpTvSeries.CORE.Repositories.Interfaces

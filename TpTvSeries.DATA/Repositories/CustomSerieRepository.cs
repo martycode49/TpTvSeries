@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using TpTvSeries.CORE.Dto;
 using TpTvSeries.CORE.Models;
 using TpTvSeries.CORE.Repositories;
 using TpTvSeries.CORE.Repositories.Interfaces;
@@ -19,7 +20,6 @@ namespace TpTvSeries.DATA.Repositories
         {
 
         }
-
 
         #region READ
         async Task<IEnumerable<Serie>> ICustomSerieRepository.GetAllWithSeasonAsync()
