@@ -14,14 +14,14 @@ namespace TpTvSeries.DATA
     public class UnitOfWork : IUnitOfWork
     {
         private readonly DatabaseContext _context;
-        private ICustomSerieRepository _serieRepository;
+        private IEfSerieRepository _serieRepository;
 
         public UnitOfWork(DatabaseContext context)
         {
             this._context = context;
         }
 
-        public ICustomSerieRepository Series => _serieRepository = _serieRepository ?? new CustomSerieRepository(_context);
+        public IEfSerieRepository Series => _serieRepository = _serieRepository ?? new EfSerieRepository(_context);
 
         public async Task<int> CommitAsync()
         {

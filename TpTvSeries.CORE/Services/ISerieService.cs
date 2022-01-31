@@ -12,7 +12,7 @@ namespace TpTvSeries.CORE.Services
         Task<IEnumerable<Serie>> GetAllSerie();
         Task<Serie> GetSerieById(int id);
         Task<Serie> CreateSerie(Serie newSerie);
-        //Task UpdateSerie(Serie serieToBeUpdate, Serie serie);
-        //Task DeleteSerie(Serie serie);
+        Task UpdateSerie(Serie serieToBeUpdate, Serie serie);
+        Task DeleteSerie(Serie serie);
     }
 }

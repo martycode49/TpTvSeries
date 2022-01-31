@@ -9,7 +9,7 @@ namespace TpTvSeries.CORE
 {
     public interface IUnitOfWork : IDisposable
     {
-        ICustomSerieRepository Series { get; }
+        IEfSerieRepository Series { get; }
         Task<int> CommitAsync();
     }
 }

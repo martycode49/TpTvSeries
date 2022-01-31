@@ -26,6 +26,11 @@ namespace TpTvSeries.Services.Services
             return newSerie;
         }
 
+        public async Task DeleteSerie(Serie serie)
+        {
+            _unitOfWork.Series.Delete(serie);
+            await _unitOfWork.CommitAsync();
+        }
 
         public async Task<IEnumerable<Serie>> GetAllSerie()
         {
@@ -43,6 +48,12 @@ namespace TpTvSeries.Services.Services
             // Faire la liste des saisons et Episodes de la serie spécifiée
             //serieFullDto.Seasons.Join(Episode).
             return null;
+        }
+
+        public async Task UpdateSerie(Serie serieToBeUpdate, Serie serie)
+        {
+            serieToBeUpdate.Title = serie.Title;
+            await _unitOfWork.CommitAsync();
         }
     }
 }
