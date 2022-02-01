@@ -14,8 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TpTvSeries.CORE\TpTvSeries.CORE.csproj" />
-    <ProjectReference Include="..\TpTvSeries.DATA\TpTvSeries.DATA.csproj" />
+    <ProjectReference Include="..\TpTvSeries.CORE\TpTvSeries.Core.csproj" />
+    <ProjectReference Include="..\TpTvSeries.DATA\TpTvSeries.Data.csproj" />
     <ProjectReference Include="..\TpTvSeries.Services\TpTvSeries.Services.csproj" />
   </ItemGroup>
 

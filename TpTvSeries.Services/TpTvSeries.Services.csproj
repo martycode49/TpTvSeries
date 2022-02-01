@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TpTvSeries.CORE\TpTvSeries.CORE.csproj" />
+    <ProjectReference Include="..\TpTvSeries.CORE\TpTvSeries.Core.csproj" />
   </ItemGroup>
 
 </Project>

@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TpTvSeries", "TpTvSeries\TpTvSeries.csproj", "{7B62FF8C-E6BA-40DF-A23A-245AA7410D27}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TpTvSeries.CORE", "TpTvSeries.CORE\TpTvSeries.CORE.csproj", "{3D3561F0-63D4-40CF-A51C-B29E8265927A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TpTvSeries.Core", "TpTvSeries.CORE\TpTvSeries.Core.csproj", "{3D3561F0-63D4-40CF-A51C-B29E8265927A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TpTvSeries.DATA", "TpTvSeries.DATA\TpTvSeries.DATA.csproj", "{54011E40-CE50-4A19-9B63-FC1ECA815F2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TpTvSeries.Data", "TpTvSeries.DATA\TpTvSeries.Data.csproj", "{54011E40-CE50-4A19-9B63-FC1ECA815F2F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TpTvSeries.Services", "TpTvSeries.Services\TpTvSeries.Services.csproj", "{1C516A32-6F2E-4074-82FA-6786E5ED603E}"
 EndProject

@@ -11,7 +11,7 @@ using TpTvSeries.CORE.Repositories.Interfaces;
 
 namespace TpTvSeries.CORE.Repositories
 {
-    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : Entity
+    public class GenericRepository<TEntity,TContext> : IGenericRepository<TEntity> where TEntity : Entity where TContext: DbContext
     {
         protected readonly DbContext _dbContext;
         protected readonly DbSet<TEntity> _dbSet;
@@ -19,7 +19,7 @@ namespace TpTvSeries.CORE.Repositories
         /// Initializes a new instance of the GenericRepository<TEntity>.
         /// </summary>
         /// <param name="dbContext">The database context.</param>
-        public GenericRepository(DbContext dbContext)
+        public GenericRepository(TContext dbContext)
         {
             _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
             _dbSet = _dbContext.Set<TEntity>();
